@@ -528,7 +528,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="tab" id="t-firma">
 <section class="ph"><div class="wrap rv"><h1>Firma digital</h1><p>Firma el acuerdo y envíalo al Founder de Team LMC. Es obligatorio para ser Integrante Oficial.</p></div></section>
 <section><div class="wrap sig">
-<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>. La firma se dirige únicamente al dueño principal (Juan Zanjay Acosta Utrera, "Zansumi", Founder). Esta página no guarda tus datos en ningún servidor: genera tu documento en tu navegador y tú lo envías. Es una firma digital simple y no sustituye a una firma electrónica avanzada.</div>
+<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>. La firma se dirige únicamente al dueño principal (Juan Zanjay Acosta Utrera, "Zansumi", Founder). Esta página no guarda tus datos en ningún servidor: genera tu documento en tu navegador. Solo se envía si tú pulsas el botón de envío (que usa el servicio FormSubmit para entregarlo al correo del equipo) o si lo mandas por tu cuenta. Es una firma digital simple y no sustituye a una firma electrónica avanzada.</div>
 <label class="field"><span>Nombre o alias del integrante</span><input type="text" id="alias" maxlength="60" autocomplete="off"></label>
 <label class="field"><span>Nombre completo (opcional)</span><input type="text" id="fname" maxlength="90" autocomplete="off"></label>
 <label class="field"><span>Fecha de aceptación</span><input type="text" id="fdate" readonly></label>
@@ -541,14 +541,15 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="sh"><h2>Documento firmado</h2></div>
 <img id="rimg" alt="Acuerdo firmado">
 <p style="color:var(--mut);margin-bottom:16px">Código de documento: <strong id="rcode" style="color:#fff"></strong>. Descarga la imagen y envíala al Founder por correo (adjúntala al mensaje) o por mensaje directo en Discord.</p>
-<div class="acts"><a class="btn" id="rdl" href="#">Descargar documento</a><a class="btn ghost" id="rmail" href="#">Enviar por correo</a><a class="btn ghost" href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Abrir Discord</a></div>
+<div class="acts"><button class="btn" id="rsend" type="button"><i class="fa-solid fa-paper-plane"></i>Enviar al correo del equipo</button><a class="btn ghost" id="rdl" href="#">Descargar documento</a><a class="btn ghost" id="rmail" href="#">Enviar manualmente</a><a class="btn ghost" href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Abrir Discord</a></div>
+<p id="rstat" role="status" style="margin-top:16px;font-weight:600"></p>
 </div>
 </div></section>
 </div>
 <div class="tab" id="t-aviso-legal">
 <section class="ph"><div class="wrap rv"><h1>Aviso legal</h1><p>Team LMC ™</p></div></section><section><div class="wrap"><div class="db" style="padding:0;max-width:820px;font-size:1.02rem">
 <h3>Titular del sitio</h3>
-<p>Este sitio web es operado por Juan Zanjay Acosta Utrera, conocido públicamente como "Zansumi", fundador de Team LMC, con domicilio de contacto en México. Correo: <a href="mailto:zanjay444@gmail.com">zanjay444@gmail.com</a>.</p>
+<p>Este sitio web es operado por Juan Zanjay Acosta Utrera, conocido públicamente como "Zansumi", fundador de Team LMC, con domicilio de contacto en México. Correo: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
 <h3>Objeto</h3>
 <p>Team LMC es un equipo de semi esports enfocado en la creación de contenido y comunidad. El sitio informa sobre el equipo, sus integrantes, patrocinadores y formas de unirse.</p>
 <h3>Propiedad intelectual</h3>
@@ -565,15 +566,15 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="tab" id="t-privacidad">
 <section class="ph"><div class="wrap rv"><h1>Aviso de privacidad</h1><p>Team LMC ™</p></div></section><section><div class="wrap"><div class="db" style="padding:0;max-width:820px;font-size:1.02rem">
 <h3>Responsable</h3>
-<p>Juan Zanjay Acosta Utrera (Zansumi), México. Contacto: <a href="mailto:zanjay444@gmail.com">zanjay444@gmail.com</a>.</p>
+<p>Juan Zanjay Acosta Utrera (Zansumi), México. Contacto: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
 <h3>Datos que tratamos</h3>
 <p>Este sitio no tiene formularios de registro ni recopila datos personales de forma directa. Si nos escribes por correo o por redes, trataremos los datos que decidas compartir (nombre, correo, usuario y mensaje). Al cargar el sitio, los proveedores de servicios externos pueden recibir datos técnicos como tu dirección IP y tu navegador.</p>
-<p>La página de firma digital procesa los datos que escribes y tu firma únicamente en tu navegador y no los envía a ningún servidor. El documento solo llega al Founder si tú mismo lo envías por correo o Discord.</p><h3>Finalidades</h3>
+<p>La página de firma digital procesa los datos que escribes y tu firma únicamente en tu navegador y no los envía a ningún servidor. El documento solo llega al equipo si tú mismo lo envías: con el botón de envío, que usa el servicio de terceros FormSubmit (formsubmit.co) para entregarlo al correo del equipo, o por correo o Discord.</p><h3>Finalidades</h3>
 <ul><li>Responder tus mensajes y solicitudes.</li><li>Evaluar solicitudes de ingreso a la comunidad.</li><li>Mantener la seguridad y el funcionamiento del sitio.</li></ul>
 <h3>Transferencias</h3>
 <p>No vendemos ni compartimos tus datos con terceros, salvo obligación legal o cuando sea necesario para atender tu solicitud (por ejemplo, plataformas como Discord).</p>
 <h3>Tus derechos</h3>
-<p>Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición, así como revocar tu consentimiento, escribiendo a <a href="mailto:zanjay444@gmail.com">zanjay444@gmail.com</a> con tu nombre y la descripción de tu solicitud.</p>
+<p>Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición, así como revocar tu consentimiento, escribiendo a <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a> con tu nombre y la descripción de tu solicitud.</p>
 <h3>Menores de edad</h3>
 <p>El ingreso a Team LMC requiere tener 15 años o más. Si eres menor, usa el sitio con el acompañamiento de tu madre, padre o tutor.</p>
 <h3>Cambios</h3>
@@ -586,7 +587,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <h3>Qué usamos</h3>
 <p>Team LMC no usa cookies de publicidad, rastreo ni análisis. Solo guardamos en tu navegador (almacenamiento local) un dato para recordar que ya viste el aviso de cookies y si silenciaste la música.</p>
 <h3>Servicios de terceros</h3>
-<ul><li>Google Fonts y cdnjs: cargan tipografías e iconos, y reciben tu dirección IP.</li><li>YouTube: se consulta para confirmar que un video es público y se reproduce con el modo de privacidad ampliada (youtube-nocookie.com).</li><li>Redes y plataformas enlazadas (Discord, Twitch, Kick, TikTok, Instagram, X): al abrir sus enlaces aplican sus propias políticas.</li></ul>
+<ul><li>Google Fonts y cdnjs: cargan tipografías e iconos, y reciben tu dirección IP.</li><li>FormSubmit: solo si pulsas el botón de envío de la firma digital, recibe los datos del documento para entregarlos al correo del equipo.</li><li>YouTube: se consulta para confirmar que un video es público y se reproduce con el modo de privacidad ampliada (youtube-nocookie.com).</li><li>Redes y plataformas enlazadas (Discord, Twitch, Kick, TikTok, Instagram, X): al abrir sus enlaces aplican sus propias políticas.</li></ul>
 <h3>Cómo gestionarlas</h3>
 <p>Puedes borrar o bloquear cookies y almacenamiento local desde la configuración de tu navegador. Para volver a ver el aviso, usa "Preferencias de cookies" en el pie de página.</p>
 <p><small>Última actualización: 12 de noviembre de 2026.</small></p>
@@ -596,7 +597,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <footer><div class="wrap">
 <div class="ftxt"><a class="fbrand" href="#inicio" aria-label="Inicio"><img src="assets/avatars/teamlmc.png" alt="Team LMC ™"></a>
 <p>Powered by LMC Studios ™ · Todos los derechos reservados ™ 2026.</p>
-<p><a href="mailto:zanjay444@gmail.com" style="text-decoration:underline">zanjay444@gmail.com</a></p></div>
+<p><a href="mailto:teamlmc.business.grup@gmail.com" style="text-decoration:underline">teamlmc.business.grup@gmail.com</a></p></div>
 <nav class="fnav" aria-label="Pie de página"><a href="#inicio">Inicio</a><a href="#equipo">Equipo</a><a href="#contenido">Contenido</a><a href="#patrocinadores">Patrocinadores</a><a href="#lineamientos">Lineamientos</a><a href="#firma">Firma</a><a href="#unirse">Unirse</a></nav>
 <div class="soc">
 <a href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
@@ -710,12 +711,14 @@ const w=560,h=Math.min(200,w*pad.height/pad.width);
 x.strokeStyle='#8E1019';x.strokeRect(60,455,w,h);x.drawImage(pad,60,455,w,h);
 x.fillStyle='#fff';x.font='22px Arial,sans-serif';
 x.fillText('Destinatario: Juan Zanjay Acosta Utrera (Zansumi), Founder de Team LMC',60,455+h+50);
-x.fillText('Contacto oficial: zanjay444@gmail.com',60,455+h+85);
+x.fillText('Contacto oficial: teamlmc.business.grup@gmail.com',60,455+h+85);
 x.fillStyle='#E01E2B';x.font=F('700',30);x.fillText('C\u00D3DIGO DE DOCUMENTO: '+code,60,455+h+135);
 $('#rimg').src=o.toDataURL('image/png');
 const dl=$('#rdl');dl.href=o.toDataURL('image/png');dl.download='Acuerdo-TeamLMC-'+alias.replace(/[^\w-]+/g,'_')+'.png';
-$('#rmail').href='mailto:zanjay444@gmail.com?subject='+encodeURIComponent('Acuerdo firmado Team LMC - '+alias)+'&body='+encodeURIComponent('Hola, soy '+alias+'. Acepto el Acuerdo de Participaci\u00F3n de Team LMC (versi\u00F3n 20/10/2026). C\u00F3digo de documento: '+code+'. Adjunto mi acuerdo firmado.');
+$('#rmail').href='mailto:teamlmc.business.grup@gmail.com?subject='+encodeURIComponent('Acuerdo firmado Team LMC - '+alias)+'&body='+encodeURIComponent('Hola, soy '+alias+'. Acepto el Acuerdo de Participaci\u00F3n de Team LMC (versi\u00F3n 20/10/2026). C\u00F3digo de documento: '+code+'. Adjunto mi acuerdo firmado.');
 $('#rcode').textContent=code;
+$('#rstat').textContent='';$('#rsend').disabled=false;
+o.toBlob(b=>{window.__doc={blob:b,alias,nom,code,fecha,file:dl.download}},'image/png');
 $('#res').style.display='block';$('#res').scrollIntoView({behavior:'smooth'})}}
 
 /* Pestanas */
@@ -757,6 +760,22 @@ try{localStorage.setItem('lmc-muted',muted?'1':'0')}catch(e){}ico()};
 au.addEventListener('error',()=>mb.hidden=true);
 au.addEventListener('pause',ico);au.addEventListener('play',ico);
 go();ico();
+
+/* Envio con FormSubmit */
+const rs=$('#rsend');
+if(rs)rs.onclick=async()=>{const d=window.__doc,st=$('#rstat');
+if(!d||!d.blob){st.style.color='#ff5560';st.textContent='Genera primero el documento firmado.';return}
+rs.disabled=true;st.style.color='var(--mut)';st.textContent='Enviando...';
+const fd=new FormData();
+fd.append('_subject','Acuerdo firmado Team LMC - '+d.alias);fd.append('_captcha','false');fd.append('_template','table');
+fd.append('Alias',d.alias);fd.append('Nombre completo',d.nom||'No proporcionado');
+fd.append('Fecha de aceptacion',d.fecha.toLocaleString('es-MX'));fd.append('Codigo de documento',d.code);fd.append('Version del acuerdo','20/10/2026');
+fd.append('attachment',d.blob,d.file);
+try{const r=await fetch('https://formsubmit.co/ajax/teamlmc.business.grup@gmail.com',{method:'POST',headers:{Accept:'application/json'},body:fd});
+const j=await r.json().catch(()=>({}));
+if(r.ok&&(j.success===true||j.success==='true')){st.style.color='#fff';st.textContent='Enviado al correo del equipo. C\u00F3digo de documento: '+d.code+'.'}
+else throw 0}
+catch(e){rs.disabled=false;st.style.color='#ff5560';st.textContent='No se pudo enviar. Descarga el documento y env\u00EDalo manualmente por correo o Discord.'}};
 </script>
 </body>
 </html>
