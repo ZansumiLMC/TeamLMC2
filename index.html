@@ -68,7 +68,7 @@ nav .lk:hover{color:var(--w)}
 .hero{padding:0;position:relative;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 80% 40%,rgba(142,16,25,.45),transparent 60%)}
 .hero::before{content:"";position:absolute;left:0;right:0;height:140px;top:-140px;background:linear-gradient(180deg,transparent,rgba(224,30,43,.12),transparent);animation:scan 7s linear infinite;pointer-events:none}
 @keyframes scan{to{transform:translateY(130vh)}}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:40px;min-height:82vh;padding-top:72px;padding-bottom:72px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1fr;align-items:center;gap:40px;min-height:82vh;padding-top:72px;padding-bottom:72px}
 .vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 .badge{display:inline-flex;align-items:center;gap:10px;padding:6px 14px;border:1px solid var(--redd);font:700 1rem 'Barlow Condensed',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#ff5560}
 .badge i{width:8px;height:8px;border-radius:50%;background:var(--red);animation:pulse 1.6s infinite}
@@ -78,7 +78,7 @@ nav .lk:hover{color:var(--w)}
 @keyframes flow{to{background-position:250% 0}}
 .hero .lead{color:rgba(255,255,255,.82);font-size:1.15rem;max-width:36rem;margin-bottom:12px}
 .hero .motto{color:var(--red);font:700 1.5rem 'Barlow Condensed',sans-serif;text-transform:uppercase;letter-spacing:.04em;margin-bottom:32px}
-.logo-box{position:relative;justify-self:center;width:min(400px,100%);aspect-ratio:1;display:grid;place-items:center}
+.logo-box{position:relative;width:min(250px,60%);aspect-ratio:1;display:grid;place-items:center;margin:26px 0 26px 14px}
 .logo-box::before,.logo-box::after{content:"";position:absolute;border-radius:50%;border:1px solid var(--redd)}
 .logo-box::before{inset:2%;border-style:dashed;animation:rot 40s linear infinite}
 .logo-box::after{inset:-6%;border-color:rgba(224,30,43,.35);animation:ring 3s ease-out infinite}
@@ -211,7 +211,7 @@ dialog[open]{animation:pop .3s cubic-bezier(.2,.7,.2,1)}
 section{padding:72px 0}
 nav{overflow-x:auto;gap:16px}nav .lk,nav .btn{white-space:nowrap}header .wrap{gap:12px}
 .hero .wrap,.about,.join{grid-template-columns:1fr}
-.logo-box{width:min(280px,70%);order:-1;justify-self:start}
+.logo-box{width:min(210px,58%);margin:20px 0 20px 10px}
 .stats .wrap{grid-template-columns:1fr}
 .stat{border-left:0;border-top:1px solid var(--line);padding-left:0}
 .stat:first-child{border-top:0}
@@ -353,7 +353,7 @@ summary{font-size:1.25rem;padding:18px 4px}
 <header><div class="wrap">
 <a class="brand" href="#inicio" aria-label="Team LMC, inicio"><img src="assets/avatars/teamlmc.png" alt="Team LMC ™"></a>
 <button class="burger" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
-<nav aria-label="Principal"><a class="lk" href="#equipo">Equipo</a><a class="lk" href="#contenido">Contenido</a><a class="lk" href="#patrocinadores">Patrocinadores</a><a class="lk" href="#lineamientos">Lineamientos</a><a class="btn sm" href="#unirse">Unirse</a></nav>
+<nav aria-label="Principal"><a class="lk" href="#inicio">Inicio</a><a class="lk" href="#equipo">Equipo</a><a class="lk" href="#contenido">Contenido</a><a class="lk" href="#patrocinadores">Patrocinadores</a><a class="lk" href="#lineamientos">Lineamientos</a><a class="btn sm" href="#unirse">Unirse</a></nav>
 </div></header>
 <main>
 <div class="tab" id="t-inicio">
@@ -361,8 +361,8 @@ summary{font-size:1.25rem;padding:18px 4px}
 <section class="hero"><div class="wrap"><div>
 <h1 class="vh">Team LMC</h1>
 <span class="badge rise"><i></i>Semi esports</span>
-<p class="sub rise" style="--d:.1s">Contenido y comunidad, <span>creados por creadores</span></p>
-<p class="lead rise" style="--d:.2s">Somos un equipo de semi esports enfocado en la creación de contenido y comunidad. Creada por creadores de contenido, para creadores de contenido.</p>
+<div class="logo-box rise" style="--d:.1s"><img src="assets/avatars/teamlmc.png" alt="Logo de Team LMC"></div>
+<p class="lead rise" style="--d:.2s">Somos un equipo de semi esports enfocado en la creación de contenido y comunidad.</p>
 <p class="motto rise" style="--d:.3s">Crecer juntos es una oportunidad para crecer.</p>
 <div class="cta rise" style="--d:.4s"><a class="btn" href="#unirse">Cómo unirte</a><a class="btn ghost" href="#equipo">Conocer al equipo</a></div>
 <div class="soc rise" style="--d:.5s">
@@ -374,7 +374,6 @@ summary{font-size:1.25rem;padding:18px 4px}
 <a href="https://x.com/lmcstudi0s" target="_blank" rel="noopener" aria-label="X de LMC Studios"><i class="fab fa-x-twitter"></i></a>
 </div>
 </div>
-<div class="logo-box rise" style="--d:.2s"><img src="assets/avatars/teamlmc.png" alt="Logo de Team LMC"></div>
 </div></section>
 <div class="ticker" aria-hidden="true"><div><span>Semi esports</span><span>Creación de contenido</span><span>Comunidad</span><span>Creadores para creadores</span><span>Crecer juntos</span><span>Semi esports</span><span>Creación de contenido</span><span>Comunidad</span><span>Creadores para creadores</span><span>Crecer juntos</span></div></div>
 <div class="stats"><div class="wrap">
@@ -397,19 +396,9 @@ summary{font-size:1.25rem;padding:18px 4px}
 <div class="pil rv" style="--d:.1s"><h3>Contenido</h3><p>Apoyamos a creadores en YouTube, Twitch, Kick y TikTok con colaboración, difusión y proyectos conjuntos.</p></div>
 <div class="pil rv" style="--d:.2s"><h3>Comunidad</h3><p>Un espacio con respeto, unión y compromiso donde cada integrante aporta su estilo.</p></div>
 </div></div></section>
-<section><div class="wrap">
-<div class="sh rv"><h2>Qué impulsamos en tu contenido</h2><p>Un Integrante Oficial no crea solo: su trabajo se difunde y se reconoce desde la comunidad.</p></div>
-<div class="grid pillars">
-<div class="pil rv"><i style="display:block;color:var(--red);font-size:1.6rem;margin-bottom:16px" class="fa-solid fa-bullhorn"></i><h3>Difusión oficial</h3><p>Tu contenido puede publicarse en las cuentas de Team LMC en X, TikTok, YouTube e Instagram.</p>
-<p style="margin-top:14px;font-size:1.2rem;color:var(--mut)"><i class="fab fa-x-twitter"></i>&nbsp;&nbsp;<i class="fab fa-tiktok"></i>&nbsp;&nbsp;<i class="fab fa-youtube"></i>&nbsp;&nbsp;<i class="fab fa-instagram"></i></p></div>
-<div class="pil rv" style="--d:.1s"><i style="display:block;color:var(--red);font-size:1.6rem;margin-bottom:16px" class="fa-solid fa-arrow-trend-up"></i><h3>Mayor posicionamiento</h3><p>Cada publicación acerca tu trabajo a la audiencia de la comunidad y amplía tu alcance como creador.</p></div>
-<div class="pil rv" style="--d:.2s"><i style="display:block;color:var(--red);font-size:1.6rem;margin-bottom:16px" class="fa-solid fa-at"></i><h3>Crédito siempre</h3><p>Tu nombre y tu @ aparecen en cada clip que compartimos. Tu trabajo, tu identidad.</p></div>
-</div>
-<p class="note rv">Sujeto a disponibilidad y a la naturaleza de cada proyecto, conforme a los acuerdos y lineamientos de participación.</p>
-</div></section>
 <section class="band"><div class="wrap">
-<div class="rv"><h2>Ser miembro es una gran oportunidad para crecer.</h2><p>Crezcamos juntos. Conoce los requisitos, lee el acuerdo de participación y fírmalo digitalmente.</p></div>
-<div class="cta rv"><a class="btn" style="background:#000" href="#unirse">Cómo unirte</a><a class="btn ghost" href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord</a></div>
+<div class="rv"><h2>Forma parte de Team LMC</h2><p>Lee el acuerdo de participación y fírmalo digitalmente.</p></div>
+<div class="cta rv"><a class="btn" style="background:#000" href="#firma">Firmar acuerdo</a><a class="btn ghost" href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Discord</a></div>
 </div></section>
 </div>
 <div class="tab" id="t-equipo">
@@ -480,7 +469,7 @@ summary{font-size:1.25rem;padding:18px 4px}
 </ol>
 <div class="cta" style="margin-top:32px"><a class="btn" href="#firma">Firmar acuerdo</a><a class="btn ghost" href="#lineamientos">Leer acuerdo</a></div></div>
 <div class="req rv" style="--d:.15s"><h3>Requisitos obligatorios</h3><ul>
-<li><i class="fa-solid fa-check"></i>+15 años</li><li><i class="fa-solid fa-check"></i>Llenar formulario.</li><li><i class="fa-solid fa-check"></i>Leer, aceptar y firmar digitalmente los acuerdos y lineamientos</li></ul>
+<li><i class="fa-solid fa-check"></i>+15 años</li><li><i class="fa-solid fa-check"></i>Completar los datos de la firma digital.</li><li><i class="fa-solid fa-check"></i>Leer, aceptar y firmar digitalmente los acuerdos y lineamientos</li></ul>
 <a class="btn" style="margin-top:20px" href="https://discord.gg/Ry5zk9WEhN" target="_blank" rel="noopener"><i class="fab fa-discord"></i>Unirme al Discord</a></div>
 </div></section>
 </div>
@@ -529,7 +518,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="tab" id="t-firma">
 <section class="ph"><div class="wrap rv"><h1>Firma digital</h1><p>Firma el acuerdo y envíalo al Founder de Team LMC. Es obligatorio para ser Integrante Oficial.</p></div></section>
 <section><div class="wrap sig">
-<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>. La firma se dirige únicamente al dueño principal (Juan Zanjay Acosta Utrera, "Zansumi", Founder). Esta página no guarda tus datos en ningún servidor: genera tu documento en tu navegador. Solo se envía si tú pulsas el botón de envío (que usa el servicio FormSubmit para entregarlo al correo del equipo) o si lo mandas por tu cuenta. Es una firma digital simple y no sustituye a una firma electrónica avanzada.<br><br><strong>Importante:</strong> al firmar confirmas que ya tienes todo en regla, como el tag <strong>ᴸᴹᶜ |</strong> en tus redes y plataformas. Te lo recordaremos en una ventana antes de generar tu documento.</div>
+<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>, disponible también en <a href="assets/TEAM_LMC_CONTRATO.pdf" target="_blank" rel="noopener" style="text-decoration:underline">PDF</a>. La firma se dirige únicamente al fundador de Team LMC (Juan Zanjay Acosta Utrera, "Zansumi"). El documento se genera en tu navegador y solo se transmite si pulsas "Enviar al correo del equipo", mediante el servicio FormSubmit. Es una firma digital simple y no sustituye a una firma electrónica avanzada.<br><br><strong>Declaración de cumplimiento:</strong> al firmar confirmas que ya cumples los requisitos de participación, incluido el uso del tag <strong>ᴸᴹᶜ |</strong> en tus redes y plataformas. Se te pedirá confirmarlo antes de generar el documento.</div>
 <label class="field"><span>Nombre o alias del integrante</span><input type="text" id="alias" maxlength="60" autocomplete="off"></label>
 <label class="field"><span>Nombre completo (opcional)</span><input type="text" id="fname" maxlength="90" autocomplete="off"></label>
 <label class="field"><span>Fecha de aceptación</span><input type="text" id="fdate" readonly></label>
@@ -541,7 +530,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div id="res">
 <div class="sh"><h2>Documento firmado</h2></div>
 <img id="rimg" alt="Acuerdo firmado">
-<p style="color:var(--mut);margin-bottom:16px">Código de documento: <strong id="rcode" style="color:#fff"></strong>. Descarga la imagen y envíala al Founder por correo (adjúntala al mensaje) o por mensaje directo en Discord.</p>
+<p style="color:var(--mut);margin-bottom:16px">Código de documento: <strong id="rcode" style="color:#fff"></strong>. Pulsa "Enviar al correo del equipo" para entregarlo al Founder y conserva una copia con "Descargar documento".</p>
 <div class="acts"><button class="btn" id="rsend" type="button"><i class="fa-solid fa-paper-plane"></i>Enviar al correo del equipo</button><a class="btn ghost" id="rdl" href="#">Descargar documento</a></div>
 <p id="rstat" role="status" style="margin-top:16px;font-weight:600"></p>
 </div>
@@ -549,55 +538,69 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 </div>
 <div class="tab" id="t-aviso-legal">
 <section class="ph"><div class="wrap rv"><h1>Aviso legal</h1><p>Team LMC ™</p></div></section><section><div class="wrap"><div class="db" style="padding:0;max-width:820px;font-size:1.02rem">
-<h3>Titular del sitio</h3>
-<p>Este sitio web es operado por Juan Zanjay Acosta Utrera, conocido públicamente como "Zansumi", fundador de Team LMC, con domicilio de contacto en México. Correo: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
-<h3>Objeto</h3>
-<p>Team LMC es un equipo de semi esports enfocado en la creación de contenido y comunidad. El sitio informa sobre el equipo, sus integrantes, patrocinadores y formas de unirse.</p>
-<h3>Propiedad intelectual</h3>
-<p>El nombre, logotipos, diseños y materiales de Team LMC ™ y LMC Studios ™ son propiedad de sus titulares. Queda prohibida su reproducción o uso comercial sin autorización previa y por escrito. Las marcas, nombres y logotipos de terceros (plataformas, patrocinadores y juegos) pertenecen a sus respectivos dueños.</p>
-<h3>Aviso de marca</h3><p>El símbolo ™ expresa la reivindicación de identidad de marca de Team LMC y no significa, por sí solo, que esté registrada ante una autoridad competente.</p><h3>Participación voluntaria</h3>
-<p>Ser integrante de Team LMC es voluntario y no constituye relación laboral, mercantil, societaria ni de subordinación, conforme a los acuerdos y lineamientos publicados en este sitio. La edad mínima para solicitar ingreso es de 15 años.</p>
-<h3>Responsabilidad y enlaces externos</h3>
-<p>Nos esforzamos por mantener la información vigente, pero no garantizamos que esté libre de errores o interrupciones. Los enlaces a sitios de terceros se ofrecen como referencia y Team LMC no controla ni se responsabiliza de su contenido o políticas.</p>
-<h3>Legislación aplicable</h3>
+<h3>1. Titular del sitio</h3>
+<p>Este sitio web es operado por Juan Zanjay Acosta Utrera, conocido públicamente como "Zansumi", fundador de Team LMC, con domicilio de contacto en México. Correo electrónico: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
+<h3>2. Objeto</h3>
+<p>Team LMC ™ es una organización de semi esports orientada a la creación de contenido y al desarrollo de comunidad. Este sitio tiene carácter informativo y permite conocer al equipo, a sus integrantes y patrocinadores, así como completar la firma digital del Acuerdo de participación.</p>
+<h3>3. Condiciones de uso</h3>
+<p>El acceso y el uso del sitio son gratuitos. El usuario se obliga a utilizarlo conforme a la ley, a la buena fe y al orden público, y a abstenerse de cualquier uso que dañe, inutilice o deteriore el sitio o impida su funcionamiento normal.</p>
+<h3>4. Propiedad intelectual y marcas</h3>
+<p>El nombre, los logotipos, los diseños y los materiales de Team LMC ™ y LMC Studios ™ son propiedad de sus titulares. Queda prohibida su reproducción, distribución o uso comercial sin autorización previa y por escrito. El símbolo ™ expresa la reivindicación de identidad de marca y no implica, por sí solo, que esta se encuentre registrada ante una autoridad competente. Las marcas, nombres y logotipos de terceros pertenecen a sus respectivos titulares.</p>
+<h3>5. Participación y Acuerdo de participación</h3>
+<p>La participación en Team LMC es voluntaria y no constituye relación laboral, mercantil, societaria ni de subordinación. Las condiciones aplicables constan en el Acuerdo de participación para Integrantes Oficiales (versión 20/10/2026), cuyo texto completo puede consultarse en <a href="assets/TEAM_LMC_CONTRATO.pdf" target="_blank" rel="noopener">formato PDF</a> y que prevalece sobre los resúmenes publicados en este sitio. La edad mínima para solicitar el ingreso es de 15 años.</p>
+<h3>6. Firma digital y declaración de cumplimiento</h3>
+<p>La firma digital generada en este sitio es una manifestación simple de aceptación y no sustituye a una firma electrónica avanzada. Antes de generar el documento, el integrante debe confirmar que cumple los requisitos de participación, entre ellos el uso del tag <strong>ᴸᴹᶜ |</strong> en el nombre de usuario, nombre visible o identificación pública de las plataformas que lo permitan (Discord, TikTok, X, Twitch, YouTube, Steam y videojuegos compatibles), salvo excepción autorizada por la administración por causa justificada.</p>
+<p>La firma se dirige exclusivamente al fundador de Team LMC, como representante autorizado para recibirla. La falta de firma o el incumplimiento de los lineamientos puede impedir, suspender o retirar la condición de Integrante Oficial.</p>
+<h3>7. Responsabilidad y enlaces externos</h3>
+<p>Team LMC procura mantener la información vigente, pero no garantiza que esté libre de errores o interrupciones. Los enlaces a sitios de terceros se ofrecen como referencia y Team LMC no controla ni se responsabiliza de su contenido o de sus políticas.</p>
+<h3>8. Legislación aplicable y jurisdicción</h3>
 <p>Este aviso se rige por las leyes de los Estados Unidos Mexicanos. Cualquier controversia se someterá a los tribunales competentes en México.</p>
-<p><small>Última actualización: 12 de noviembre de 2026.</small></p>
+<p><small>Última actualización: 13 de noviembre de 2026.</small></p>
 </div></div></section>
 </div>
+
 <div class="tab" id="t-privacidad">
 <section class="ph"><div class="wrap rv"><h1>Aviso de privacidad</h1><p>Team LMC ™</p></div></section><section><div class="wrap"><div class="db" style="padding:0;max-width:820px;font-size:1.02rem">
-<h3>Responsable</h3>
-<p>Juan Zanjay Acosta Utrera (Zansumi), México. Contacto: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
-<h3>Datos que tratamos</h3>
-<p>Este sitio no tiene formularios de registro ni recopila datos personales de forma directa. Si nos escribes por correo o por redes, trataremos los datos que decidas compartir (nombre, correo, usuario y mensaje). Al cargar el sitio, los proveedores de servicios externos pueden recibir datos técnicos como tu dirección IP y tu navegador.</p>
-<p>La página de firma digital procesa los datos que escribes y tu firma únicamente en tu navegador y no los envía a ningún servidor. El documento solo llega al equipo si tú mismo lo envías: con el botón de envío, que usa el servicio de terceros FormSubmit (formsubmit.co) para entregarlo al correo del equipo, o por correo o Discord.</p><h3>Finalidades</h3>
-<ul><li>Responder tus mensajes y solicitudes.</li><li>Evaluar solicitudes de ingreso a la comunidad.</li><li>Mantener la seguridad y el funcionamiento del sitio.</li></ul>
-<h3>Transferencias</h3>
-<p>No vendemos ni compartimos tus datos con terceros, salvo obligación legal o cuando sea necesario para atender tu solicitud (por ejemplo, plataformas como Discord).</p>
-<h3>Tus derechos</h3>
-<p>Puedes ejercer tus derechos de acceso, rectificación, cancelación y oposición, así como revocar tu consentimiento, escribiendo a <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a> con tu nombre y la descripción de tu solicitud.</p>
-<h3>Menores de edad</h3>
-<p>El ingreso a Team LMC requiere tener 15 años o más. Si eres menor, usa el sitio con el acompañamiento de tu madre, padre o tutor.</p>
-<h3>Cambios</h3>
-<p>Publicaremos cualquier modificación a este aviso en esta misma página.</p>
-<p><small>Última actualización: 12 de noviembre de 2026.</small></p>
+<h3>1. Responsable</h3>
+<p>Juan Zanjay Acosta Utrera ("Zansumi"), con domicilio de contacto en México, es responsable del tratamiento de los datos personales a los que se refiere este aviso. Correo electrónico: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
+<h3>2. Datos personales tratados</h3>
+<ul><li><strong>Firma digital:</strong> alias, nombre completo (opcional), fecha de aceptación, firma dibujada por el integrante y código de documento, generados en el navegador del usuario.</li><li><strong>Comunicaciones:</strong> los datos que el usuario decida compartir al escribir por correo electrónico o redes sociales (nombre, correo, usuario y mensaje).</li><li><strong>Datos técnicos:</strong> dirección IP y datos del navegador, que pueden recibir los proveedores externos que sirven recursos del sitio.</li></ul>
+<p>El sitio no cuenta con cuentas de usuario ni formularios de registro.</p>
+<h3>3. Envío del documento firmado</h3>
+<p>El documento se genera y permanece en el navegador del usuario. Solo se transmite cuando el usuario pulsa "Enviar al correo del equipo", mediante el servicio de terceros FormSubmit (formsubmit.co), que lo entrega al correo oficial del equipo. El usuario puede descargar una copia en cualquier momento. El sitio no habilita otros canales de envío. La confirmación previa a la firma se realiza en el navegador y no genera un registro independiente.</p>
+<h3>4. Finalidades</h3>
+<ul><li>Verificar la aceptación del Acuerdo de participación.</li><li>Evaluar solicitudes de ingreso y administrar la condición de Integrante Oficial.</li><li>Atender mensajes y solicitudes.</li><li>Mantener la seguridad y el funcionamiento del sitio.</li></ul>
+<h3>5. Conservación</h3>
+<p>Los datos se conservan durante el tiempo necesario para cumplir las finalidades descritas y las obligaciones legales aplicables.</p>
+<h3>6. Transferencias</h3>
+<p>Team LMC no vende ni cede datos personales a terceros, salvo obligación legal o cuando sea necesario para prestar el servicio solicitado, por ejemplo mediante los proveedores y plataformas señalados en la Política de cookies.</p>
+<h3>7. Derechos del titular</h3>
+<p>El titular puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, así como revocar su consentimiento, mediante solicitud a <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a> que incluya su nombre y la descripción de la petición.</p>
+<h3>8. Menores de edad</h3>
+<p>El ingreso a Team LMC requiere tener 15 años o más. Las personas menores de edad deben utilizar el sitio con el acompañamiento de su madre, padre o tutor.</p>
+<h3>9. Modificaciones</h3>
+<p>Cualquier modificación a este aviso se publicará en esta misma página.</p>
+<p><small>Última actualización: 13 de noviembre de 2026.</small></p>
 </div></div></section>
 </div>
+
 <div class="tab" id="t-cookies">
 <section class="ph"><div class="wrap rv"><h1>Política de cookies</h1><p>Team LMC ™</p></div></section><section><div class="wrap"><div class="db" style="padding:0;max-width:820px;font-size:1.02rem">
-<h3>Qué usamos</h3>
-<p>Team LMC no usa cookies de publicidad, rastreo ni análisis. Solo guardamos en tu navegador (almacenamiento local) un dato para recordar que ya viste el aviso de cookies y si silenciaste la música.</p>
-<h3>Servicios de terceros</h3>
-<ul><li>Google Fonts y cdnjs: cargan tipografías e iconos, y reciben tu dirección IP.</li><li>FormSubmit: solo si pulsas el botón de envío de la firma digital, recibe los datos del documento para entregarlos al correo del equipo.</li><li>YouTube: se consulta para confirmar que un video es público y se reproduce con el modo de privacidad ampliada (youtube-nocookie.com).</li><li>Redes y plataformas enlazadas (Discord, Twitch, Kick, TikTok, Instagram, X): al abrir sus enlaces aplican sus propias políticas.</li></ul>
-<h3>Cómo gestionarlas</h3>
-<p>Puedes borrar o bloquear cookies y almacenamiento local desde la configuración de tu navegador. Para volver a ver el aviso, usa "Preferencias de cookies" en el pie de página.</p>
-<p><small>Última actualización: 12 de noviembre de 2026.</small></p>
+<h3>1. Almacenamiento local</h3>
+<p>Team LMC ™ no utiliza cookies publicitarias, de rastreo ni de análisis. El sitio emplea únicamente almacenamiento local del navegador para conservar dos preferencias:</p>
+<ul><li><strong>lmc-cookies:</strong> registra que se mostró el aviso de cookies.</li><li><strong>lmc-muted:</strong> registra si el usuario silenció la música.</li></ul>
+<h3>2. Servicios de terceros</h3>
+<ul><li><strong>Google Fonts y cdnjs:</strong> sirven tipografías e iconos y pueden recibir la dirección IP del usuario.</li><li><strong>YouTube:</strong> se consulta para confirmar que un video es público y se reproduce en modo de privacidad ampliada (youtube-nocookie.com).</li><li><strong>FormSubmit:</strong> recibe los datos del documento únicamente cuando el usuario pulsa "Enviar al correo del equipo" en la firma digital.</li><li><strong>Redes y plataformas enlazadas</strong> (Discord, Twitch, Kick, TikTok, Instagram y X): se rigen por sus propias políticas al abrir sus enlaces.</li></ul>
+<h3>3. Gestión de preferencias</h3>
+<p>El usuario puede borrar o bloquear el almacenamiento local desde la configuración de su navegador. Para consultar nuevamente el aviso, puede utilizar "Preferencias de cookies" en el pie de página. El tratamiento de datos personales se describe en el <a href="#privacidad">Aviso de privacidad</a>.</p>
+<p><small>Última actualización: 13 de noviembre de 2026.</small></p>
 </div></div></section>
 </div>
+
 </main>
 <footer><div class="wrap">
 <div class="ftxt"><a class="fbrand" href="#inicio" aria-label="Inicio"><img src="assets/avatars/teamlmc.png" alt="Team LMC ™"></a>
-<p>Powered by LMC Studios ™ · Todos los derechos reservados ™ 2026.</p>
+<p>Powered by LMC Studios ™</p>
 <p><a href="mailto:teamlmc.business.grup@gmail.com" style="text-decoration:underline">teamlmc.business.grup@gmail.com</a></p></div>
 <nav class="fnav" aria-label="Pie de página"><a href="#inicio">Inicio</a><a href="#equipo">Equipo</a><a href="#contenido">Contenido</a><a href="#patrocinadores">Patrocinadores</a><a href="#lineamientos">Lineamientos</a><a href="#firma">Firma</a><a href="#unirse">Unirse</a></nav>
 <div class="soc">
@@ -608,7 +611,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <a href="https://x.com/team__lmc" target="_blank" rel="noopener" aria-label="X de Team LMC"><i class="fab fa-x-twitter"></i></a>
 <a href="https://x.com/lmcstudi0s" target="_blank" rel="noopener" aria-label="X de LMC Studios"><i class="fab fa-x-twitter"></i></a>
 </div>
-<div class="legal"><a href="#aviso-legal">Aviso legal</a><a href="#privacidad">Privacidad</a><a href="#cookies">Cookies</a><button data-open="ck-set">Preferencias de cookies</button><small>© 2026 Team LMC ™. Las marcas de terceros pertenecen a sus respectivos dueños.</small></div>
+<div class="legal"><a href="#aviso-legal">Aviso legal</a><a href="#privacidad">Privacidad</a><a href="#cookies">Cookies</a><button data-open="ck-set">Preferencias de cookies</button><small>© 2026 Team LMC ™. Todos los derechos reservados. Las marcas de terceros pertenecen a sus respectivos titulares.</small></div>
 </div></footer>
 <a class="top" href="#top" onclick="scrollTo(0,0);return false" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></a>
 <iframe name="fsframe" id="fsframe" title="Envío de firma" hidden></iframe>
@@ -627,9 +630,9 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 </div></dialog>
 <audio id="bgm" src="assets/teamlmc.mp3" loop preload="auto"></audio>
 <button id="mute" type="button" aria-label="Activar música"><i class="fa-solid fa-play"></i></button>
-<div id="ck" role="region" aria-label="Aviso de cookies">
-<p>Este sitio solo usa almacenamiento local para recordar esta preferencia y no usa cookies de publicidad ni de análisis. Algunos servicios de terceros (fuentes, iconos y YouTube) pueden recibir tu IP al cargar. Más en la <a href="#cookies" style="text-decoration:underline">Política de cookies</a> y el <a href="#privacidad" style="text-decoration:underline">Aviso de privacidad</a>.</p>
-<button class="btn sm" id="ckOk">Entendido</button>
+<div id="ck" role="region" aria-label="Preferencias de cookies">
+<p>Este sitio utiliza únicamente almacenamiento local para recordar tus preferencias (aviso de cookies y audio). No emplea cookies publicitarias, de rastreo ni de análisis. Los servicios de terceros (fuentes, iconos, YouTube y, solo al enviar tu firma, FormSubmit) pueden recibir tu dirección IP. Consulta la <a href="#cookies" style="text-decoration:underline">Política de cookies</a> y el <a href="#privacidad" style="text-decoration:underline">Aviso de privacidad</a>.</p>
+<button class="btn sm" id="ckOk">Aceptar</button>
 </div>
 <script>
 
@@ -796,12 +799,12 @@ add('Alias',d.alias);add('Nombre completo',d.nom||'No proporcionado');add('Fecha
 add('Codigo de documento',d.code);add('Version del acuerdo','20/10/2026');
 const fi=document.createElement('input');fi.type='file';fi.name='attachment';
 try{const dt=new DataTransfer();dt.items.add(new File([d.blob],d.file,{type:'image/png'}));fi.files=dt.files}catch(e){
-rs.disabled=false;st.style.color='#ff5560';st.textContent='Tu navegador no permite adjuntar la imagen. Descarga el documento y env\u00EDalo manualmente.';return}
+rs.disabled=false;st.style.color='#ff5560';st.textContent='Tu navegador no permite adjuntar la imagen. Descarga el documento e int\u00E9ntalo desde otro navegador.';return}
 f.appendChild(fi);document.body.appendChild(f);
 let done=false;
 const ok=()=>{if(done)return;done=true;st.style.color='#fff';st.textContent='Firma enviada al correo del equipo con la imagen adjunta. C\u00F3digo de documento: '+d.code+'.';f.remove()};
 fr.onload=ok;
-setTimeout(()=>{if(!done){done=true;rs.disabled=false;st.style.color='#ff5560';st.textContent='No se pudo confirmar el env\u00EDo. Descarga el documento y env\u00EDalo manualmente por correo o Discord.';f.remove()}},20000);
+setTimeout(()=>{if(!done){done=true;rs.disabled=false;st.style.color='#ff5560';st.textContent='No se pudo confirmar el env\u00EDo. Descarga el documento e int\u00E9ntalo de nuevo m\u00E1s tarde.';f.remove()}},20000);
 f.submit()};
 </script>
 </body>
