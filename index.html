@@ -528,7 +528,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="tab" id="t-firma">
 <section class="ph"><div class="wrap rv"><h1>Firma digital</h1><p>Firma el acuerdo y envíalo al Founder de Team LMC. Es obligatorio para ser Integrante Oficial.</p></div></section>
 <section><div class="wrap sig">
-<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>. La firma se dirige únicamente al dueño principal (Juan Zanjay Acosta Utrera, "Zansumi", Founder). Esta página no guarda tus datos en ningún servidor: genera tu documento en tu navegador. Solo se envía si tú pulsas el botón de envío (que usa el servicio FormSubmit para entregarlo al correo del equipo) o si lo mandas por tu cuenta. Es una firma digital simple y no sustituye a una firma electrónica avanzada.</div>
+<div class="note" style="margin-top:0;margin-bottom:32px"><strong>Antes de firmar:</strong> lee el <a href="#lineamientos" style="text-decoration:underline">acuerdo completo</a>. La firma se dirige únicamente al dueño principal (Juan Zanjay Acosta Utrera, "Zansumi", Founder). Esta página no guarda tus datos en ningún servidor: genera tu documento en tu navegador. Solo se envía si tú pulsas el botón de envío (que usa un script de Google Apps Script para entregarlo al correo del equipo) o si lo mandas por tu cuenta. Es una firma digital simple y no sustituye a una firma electrónica avanzada.</div>
 <label class="field"><span>Nombre o alias del integrante</span><input type="text" id="alias" maxlength="60" autocomplete="off"></label>
 <label class="field"><span>Nombre completo (opcional)</span><input type="text" id="fname" maxlength="90" autocomplete="off"></label>
 <label class="field"><span>Fecha de aceptación</span><input type="text" id="fdate" readonly></label>
@@ -569,7 +569,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <p>Juan Zanjay Acosta Utrera (Zansumi), México. Contacto: <a href="mailto:teamlmc.business.grup@gmail.com">teamlmc.business.grup@gmail.com</a>.</p>
 <h3>Datos que tratamos</h3>
 <p>Este sitio no tiene formularios de registro ni recopila datos personales de forma directa. Si nos escribes por correo o por redes, trataremos los datos que decidas compartir (nombre, correo, usuario y mensaje). Al cargar el sitio, los proveedores de servicios externos pueden recibir datos técnicos como tu dirección IP y tu navegador.</p>
-<p>La página de firma digital procesa los datos que escribes y tu firma únicamente en tu navegador y no los envía a ningún servidor. El documento solo llega al equipo si tú mismo lo envías: con el botón de envío, que usa el servicio de terceros FormSubmit (formsubmit.co) para entregarlo al correo del equipo, o por correo o Discord.</p><h3>Finalidades</h3>
+<p>La página de firma digital procesa los datos que escribes y tu firma únicamente en tu navegador y no los envía a ningún servidor. El documento solo llega al equipo si tú mismo lo envías: con el botón de envío, que usa un servicio de terceros, Google Apps Script (Google), para entregarlo al correo del equipo, o por correo o Discord.</p><h3>Finalidades</h3>
 <ul><li>Responder tus mensajes y solicitudes.</li><li>Evaluar solicitudes de ingreso a la comunidad.</li><li>Mantener la seguridad y el funcionamiento del sitio.</li></ul>
 <h3>Transferencias</h3>
 <p>No vendemos ni compartimos tus datos con terceros, salvo obligación legal o cuando sea necesario para atender tu solicitud (por ejemplo, plataformas como Discord).</p>
@@ -587,7 +587,7 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <h3>Qué usamos</h3>
 <p>Team LMC no usa cookies de publicidad, rastreo ni análisis. Solo guardamos en tu navegador (almacenamiento local) un dato para recordar que ya viste el aviso de cookies y si silenciaste la música.</p>
 <h3>Servicios de terceros</h3>
-<ul><li>Google Fonts y cdnjs: cargan tipografías e iconos, y reciben tu dirección IP.</li><li>FormSubmit: solo si pulsas el botón de envío de la firma digital, recibe los datos del documento para entregarlos al correo del equipo.</li><li>YouTube: se consulta para confirmar que un video es público y se reproduce con el modo de privacidad ampliada (youtube-nocookie.com).</li><li>Redes y plataformas enlazadas (Discord, Twitch, Kick, TikTok, Instagram, X): al abrir sus enlaces aplican sus propias políticas.</li></ul>
+<ul><li>Google Fonts y cdnjs: cargan tipografías e iconos, y reciben tu dirección IP.</li><li>Google Apps Script: solo si pulsas el botón de envío de la firma digital, recibe los datos del documento para entregarlos al correo del equipo.</li><li>YouTube: se consulta para confirmar que un video es público y se reproduce con el modo de privacidad ampliada (youtube-nocookie.com).</li><li>Redes y plataformas enlazadas (Discord, Twitch, Kick, TikTok, Instagram, X): al abrir sus enlaces aplican sus propias políticas.</li></ul>
 <h3>Cómo gestionarlas</h3>
 <p>Puedes borrar o bloquear cookies y almacenamiento local desde la configuración de tu navegador. Para volver a ver el aviso, usa "Preferencias de cookies" en el pie de página.</p>
 <p><small>Última actualización: 12 de noviembre de 2026.</small></p>
@@ -610,7 +610,6 @@ La falta de firma podrá impedir la confirmación o continuidad de su condición
 <div class="legal"><a href="#aviso-legal">Aviso legal</a><a href="#privacidad">Privacidad</a><a href="#cookies">Cookies</a><button data-open="ck-set">Preferencias de cookies</button><small>© 2026 Team LMC ™. Las marcas de terceros pertenecen a sus respectivos dueños.</small></div>
 </div></footer>
 <a class="top" href="#top" onclick="scrollTo(0,0);return false" aria-label="Volver arriba"><i class="fa-solid fa-arrow-up"></i></a>
-<iframe name="fsframe" id="fsframe" title="Envío de firma" hidden></iframe>
 <audio id="bgm" src="assets/teamlmc.mp3" loop preload="auto"></audio>
 <button id="mute" type="button" aria-label="Activar música"><i class="fa-solid fa-play"></i></button>
 <div id="ck" role="region" aria-label="Aviso de cookies">
@@ -762,26 +761,35 @@ au.addEventListener('error',()=>mb.hidden=true);
 au.addEventListener('pause',ico);au.addEventListener('play',ico);
 go();ico();
 
-/* Envio con FormSubmit (formulario multipart real para que la imagen viaje como adjunto) */
+/* Envio con Google Apps Script (la imagen viaja en base64 y el script arma el correo con el adjunto) */
+const GAS_URL = 'https://script.google.com/macros/s/AKfycbyOlZ33uEUK9vFfEsY8qC6C6WUNFRxCtoeEg2gZK0ulduk0GgWOS50vHEiwU7By8NaPVQ/exec';
+const GAS_TOKEN = '5APO2O95f3EFi-fXCq2oynLvNtjHh8EX';
 const rs=$('#rsend');
-if(rs)rs.onclick=()=>{const d=window.__doc,st=$('#rstat'),fr=$('#fsframe');
-if(!d||!d.blob){st.style.color='#ff5560';st.textContent='Genera primero el documento firmado.';return}
-rs.disabled=true;st.style.color='var(--mut)';st.textContent='Enviando firma...';
-const f=document.createElement('form');f.method='POST';f.enctype='multipart/form-data';f.target='fsframe';f.hidden=true;
-f.action='https://formsubmit.co/teamlmc.business.grup@gmail.com';
-const add=(k,v)=>{const i=document.createElement('input');i.type='hidden';i.name=k;i.value=v;f.appendChild(i)};
-add('_subject','Acuerdo firmado Team LMC - '+d.alias);add('_captcha','false');add('_template','table');
-add('Alias',d.alias);add('Nombre completo',d.nom||'No proporcionado');add('Fecha de aceptacion',d.fecha.toLocaleString('es-MX'));
-add('Codigo de documento',d.code);add('Version del acuerdo','20/10/2026');
-const fi=document.createElement('input');fi.type='file';fi.name='attachment';
-try{const dt=new DataTransfer();dt.items.add(new File([d.blob],d.file,{type:'image/png'}));fi.files=dt.files}catch(e){
-rs.disabled=false;st.style.color='#ff5560';st.textContent='Tu navegador no permite adjuntar la imagen. Descarga el documento y env\u00EDalo manualmente.';return}
-f.appendChild(fi);document.body.appendChild(f);
-let done=false;
-const ok=()=>{if(done)return;done=true;st.style.color='#fff';st.textContent='Firma enviada al correo del equipo con la imagen adjunta. C\u00F3digo de documento: '+d.code+'.';f.remove()};
-fr.onload=ok;
-setTimeout(()=>{if(!done){done=true;rs.disabled=false;st.style.color='#ff5560';st.textContent='No se pudo confirmar el env\u00EDo. Descarga el documento y env\u00EDalo manualmente por correo o Discord.';f.remove()}},20000);
-f.submit()};
+if(rs)rs.onclick = async () => {
+  const d = window.__doc, st = $('#rstat');
+  if (!d || !d.blob) { st.style.color='#ff5560'; st.textContent='Genera primero el documento firmado.'; return; }
+  rs.disabled = true; st.style.color='var(--mut)'; st.textContent='Enviando firma...';
+  try {
+    const b64 = await new Promise((ok, no) => {
+      const r = new FileReader();
+      r.onload = () => ok(r.result.split(',')[1]);
+      r.onerror = no;
+      r.readAsDataURL(d.blob);
+    });
+    await fetch(GAS_URL, {
+      method: 'POST', mode: 'no-cors',
+      body: new URLSearchParams({
+        token: GAS_TOKEN, alias: d.alias, nombre: d.nom || '',
+        fecha: d.fecha.toLocaleString('es-MX'), codigo: d.code,
+        filename: d.file, image: b64 })
+    });
+    st.style.color='#fff';
+    st.textContent = 'Firma enviada. C\u00F3digo de documento: ' + d.code + '.';
+  } catch (e) {
+    rs.disabled = false; st.style.color='#ff5560';
+    st.textContent = 'No se pudo enviar. Descarga el documento y env\u00EDalo manualmente.';
+  }
+};
 </script>
 </body>
 </html>
